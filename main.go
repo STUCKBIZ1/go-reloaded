@@ -4,10 +4,12 @@ import (
 	"fmt"
 	"os"
 	"strings"
+
+	go_reloaded "go_reloaded/servers"
 )
 
 func main() {
-	if len(os.Args) < 3 || len(os.Args) > 3{
+	if len(os.Args) < 3 || len(os.Args) > 3 {
 		fmt.Println("usage: program input.txt output.txt")
 		return
 	}
@@ -27,9 +29,9 @@ func main() {
 	}
 
 	lines := strings.Split(string(content), "\n")
-	result := Manager(lines)
+	result := go_reloaded.Manager(lines)
 
-	err = os.WriteFile(output, []byte(result), 0o777)
+	err = os.WriteFile(output, []byte(result), 0o775)
 	if err != nil {
 		fmt.Println(err)
 		return

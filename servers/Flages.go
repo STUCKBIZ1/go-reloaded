@@ -1,4 +1,4 @@
-package main
+package go_reloaded
 
 import (
 	"strings"
@@ -8,12 +8,7 @@ func Flages(line string) string {
 	var words []string
 	var res []string
 	var result string
-	strs := strings.Split(line, " ")
-	for i, v := range strs {
-		if v != "" && i < len(strs) {
-			words = append(words, v)
-		}
-	}
+	words = strings.Split(line, " ")
 	for i, word := range words {
 		if IsFlage(word) {
 			if i != 0 {

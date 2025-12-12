@@ -1,4 +1,4 @@
-package main
+package go_reloaded
 
 func IsGFlage(str string) bool {
 	switch str {

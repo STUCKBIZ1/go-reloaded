@@ -1,11 +1,17 @@
-package main
+package go_reloaded
 
 import (
 	"strconv"
 	"strings"
 )
 
-func CFlage(strs []string, flag string) []string {
+func CFlage(words []string, flag string) []string {
+	var strs []string
+	for i, v := range words {
+		if v != "" && i < len(words) {
+			strs = append(strs, v)
+		}
+	}
 	switch flag {
 	case "(cap)":
 		i := len(strs) - 1

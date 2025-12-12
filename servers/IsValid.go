@@ -1,8 +1,10 @@
-package main
+package go_reloaded
+
+import "unicode"
 
 func IsValid(word string) bool {
 	for _, char := range word {
-		if char >= 'a' && char <= 'z' || char >= 'A' && char <= 'Z' {
+		if unicode.IsLetter(char) {
 			return true
 		}
 	}

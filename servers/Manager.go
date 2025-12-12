@@ -1,6 +1,8 @@
-package main
+package go_reloaded
 
-import "strings"
+import (
+	"strings"
+)
 
 func Manager(lines []string) string {
 	var result string

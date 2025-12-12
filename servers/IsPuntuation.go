@@ -1,4 +1,4 @@
-package main
+package go_reloaded
 
 func IsPunctuation(a rune) bool {
 	switch a {

@@ -1,13 +1,15 @@
-package main
+package go_reloaded
 
 import (
 	"strconv"
-	"strings"
 )
 
 func IsNumber(str string) bool {
+	if str == "" {
+		return false
+	}
 	if str[len(str)-1] == ')' {
-		str = strings.TrimRight(str, ")")
+		str = str[:len(str)-1]
 		_, err := strconv.Atoi(str)
 		if err == nil {
 			return true

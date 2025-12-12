@@ -1,4 +1,4 @@
-package main
+package go_reloaded
 
 func IsFlage(word string) bool {
 	switch word {

@@ -1,11 +1,18 @@
-package main
+package go_reloaded
 
 import (
 	"strconv"
 	"strings"
+	 
 )
 
-func CGFlage(strs []string, str string, flag string) []string {
+func CGFlage(words []string, str string, flag string) []string {
+	var strs []string
+	for i, v := range words {
+		if v != "" && i < len(words) {
+			strs = append(strs, v)
+		}
+	}
 	switch flag {
 	case "(cap,":
 		str = strings.TrimRight(str, ")")
